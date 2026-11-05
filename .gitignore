@@ -1,0 +1,12 @@
+# C++ / Qt 构建产物
+build/
+build-*/
+*.user
+*.autosave
+
+# Python 虚拟环境与缓存
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo

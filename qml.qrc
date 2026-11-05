@@ -1,0 +1,23 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>UI/Views/HomeScreen.qml</file>
+        <file>UI/Views/HvacPanel.qml</file>
+        <file>UI/Views/MediaPanel.qml</file>
+        <file>UI/Components/TopBar.qml</file>
+        <file>UI/Components/DockBar.qml</file>
+        <file>UI/Views/TaskViewer.qml</file>
+        <file>UI/Views/ControlCenter.qml</file>
+        <file>UI/Views/WidgetSelector.qml</file>
+        <file>UI/Widgets/WifiWidget.qml</file>
+        <file>UI/Widgets/WeatherWidget.qml</file>
+        <file>UI/Widgets/MediaWidget.qml</file>
+        <file>UI/Widgets/AcWidget.qml</file>
+        <file>UI/Views/SettingsPanel.qml</file>
+        <file>UI/Views/SettingsPages/AboutPage.qml</file>
+        <file>UI/Views/SettingsPages/DisplayPage.qml</file>
+        <file>UI/Views/SettingsPages/NetworkPage.qml</file>
+        <file>UI/Views/SettingsPages/SoundPage.qml</file>
+        <file>UI/Views/AgentFloatingBall.qml</file>
+    </qresource>
+</RCC>
