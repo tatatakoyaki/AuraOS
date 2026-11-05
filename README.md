@@ -24,41 +24,43 @@
 
 ---
 
+## 🏗️ 系统架构图 (Architecture)
+
+```mermaid
 graph TD
     %% 表现层
-    subgraph UI_Layer ["表现层 / QML - MVVM"]
-        MainUI["Main Screen"]
-        DashUI["Dashboard"]
-        Dock["Dock Bar"]
+    subgraph UI_Layer [表现层 / QML - MVVM]
+        MainUI[Main Screen]
+        DashUI[Dashboard]
+        Dock[Dock Bar]
     end
 
     %% 中央调度与安全层
-    subgraph Core_Layer ["微内核调度与安全层 / C++"]
-        SM["SystemManager<br/>中央调度器"]
-        AG["AgentGuard<br/>AI 安全网关 (骨架)"]
-        AR["AgentRegistry<br/>Agent 档案中心 (骨架)"]
-        RE["RuleEngine<br/>物理规则引擎 (骨架)"]
-        BB["Blackboard<br/>全局黑板 (骨架)"]
-        AgentBridge["AgentBridge<br/>通信网关"]
+    subgraph Core_Layer [微内核调度与安全层 / C++]
+        SM[SystemManager<br>中央调度器]
+        AG[AgentGuard<br>AI 安全网关 (骨架)]
+        AR[AgentRegistry<br>Agent 档案中心 (骨架)]
+        RE[RuleEngine<br>物理规则引擎 (骨架)]
+        BB[Blackboard<br>全局黑板 (骨架)]
     end
 
     %% 业务逻辑层
-    subgraph Service_Layer ["业务逻辑层 / Services"]
-        Hvac["HvacHandler"]
-        Media["MediaHandler"]
-        App["AppManager"]
+    subgraph Service_Layer [业务逻辑层 / Services]
+        Hvac[HvacHandler]
+        Media[MediaHandler]
+        App[AppManager]
     end
 
     %% 硬件抽象层
-    subgraph HAL_Layer ["硬件抽象层 / HAL"]
-        IHvac["IHvacHardware"]
-        IMedia["IMediaHardware"]
+    subgraph HAL_Layer [硬件抽象层 / HAL]
+        IHvac[IHvacHardware]
+        IMedia[IMediaHardware]
     end
 
     %% AI 外部服务
-    subgraph AI_Cloud ["云端 / 本地 AI 微服务 (已跑通)"]
-        Python["Python + LangChain"]
-        Whisper["Whisper ASR / TTS"]
+    subgraph AI_Cloud [云端 / 本地 AI 微服务 (已跑通)]
+        Python[Python + LangChain]
+        Whisper[Whisper ASR / TTS]
     end
 
     %% 连线关系
@@ -69,7 +71,7 @@ graph TD
     Python <-->|HTTP / WebSocket| AgentBridge
     AgentBridge -->|提交审查| AG
     AG -->|权限与规则校验| AR & RE
-    AG -->|审核通过| SM
+    AG -->|审核通过| SM改好发给我把
     
 🛠️ 技术栈 (Tech Stack)
 前端/HMI：Qt 5.15 / QML / Qt Quick (MVVM)
