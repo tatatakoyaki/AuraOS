@@ -26,6 +26,7 @@
 
 ## 🏗️ 系统架构图 (Architecture)
 
+```mermaid
 graph TD
     %% 表现层
     subgraph UI_Layer ["表现层 / QML - MVVM"]
@@ -72,6 +73,7 @@ graph TD
     AgentBridge -->|提交审查| AG
     AG -->|权限与规则校验| AR & RE
     AG -->|审核通过| SM
+    ...
     
 🛠️ 技术栈 (Tech Stack)
 前端/HMI：Qt 5.15 / QML / Qt Quick (MVVM)
